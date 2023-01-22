@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_yu_gi_oh/src/widgets/widgets.dart';
+import 'package:proyecto_yu_gi_oh/src/carta/carta.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: const Text('Yu-Gi-Oh'),
         ),
-        body: const CartaWidgets(),
+        body: const Carta(),
       ),
     );
   }
