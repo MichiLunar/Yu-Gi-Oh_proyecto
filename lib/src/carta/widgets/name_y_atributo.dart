@@ -8,11 +8,22 @@ class NameYAtributo extends StatelessWidget {
     return Container(
       height: (size.height * 0.15) * 0.6,
       width: double.infinity,
-      color: Colors.indigo,
+      //color: Colors.indigo,
       child: Container(
         margin: const EdgeInsets.all(15),
         padding: const EdgeInsets.all(3),
-        decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Colors.black,
+              Colors.white38,
+              Colors.black,
+            ],
+          ),
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [

@@ -25,10 +25,25 @@ class _ImagenCarta extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(7),
       margin: const EdgeInsets.all(10),
-      color: Colors.black54,
+      decoration: _boxDecoration(),
       child: Image.network(
         "https://static.wikia.nocookie.net/yugiohenespanol/images/0/0b/Foto_drag%C3%B3n_blanco_de_ojos_azules.jpg/revision/latest?cb=20120203053029&path-prefix=es",
         fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  BoxDecoration _boxDecoration() {
+    return const BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(10)),
+      gradient: LinearGradient(
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
+        colors: [
+          Colors.black,
+          Colors.white38,
+          Colors.black,
+        ],
       ),
     );
   }

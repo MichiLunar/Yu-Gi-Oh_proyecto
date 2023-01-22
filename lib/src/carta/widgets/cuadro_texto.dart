@@ -24,7 +24,7 @@ class _InfoCarta extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(right: 10, left: 10, top: 5, bottom: 5),
       //color: Colors.amber,
-      decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+      decoration: _boxDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -37,6 +37,21 @@ class _InfoCarta extends StatelessWidget {
             color: Colors.black,
           ),
           const _AtakDef(),
+        ],
+      ),
+    );
+  }
+
+  BoxDecoration _boxDecoration() {
+    return const BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(10)),
+      gradient: LinearGradient(
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
+        colors: [
+          Colors.black,
+          Colors.white38,
+          Colors.black,
         ],
       ),
     );
