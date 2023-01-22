@@ -23,14 +23,20 @@ class _InfoCarta extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 10, left: 10, top: 5, bottom: 5),
-      color: Colors.amber,
+      //color: Colors.amber,
+      decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: const [
-          _Tipo(),
-          _Descripcion(),
-          Spacer(),
-          _AtakDef(),
+        children: [
+          const _Tipo(),
+          const _Descripcion(),
+          const Spacer(),
+          Container(
+            width: double.infinity,
+            height: 2,
+            color: Colors.black,
+          ),
+          const _AtakDef(),
         ],
       ),
     );
